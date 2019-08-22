@@ -48,5 +48,5 @@ git add .
 git commit -m "<commit_details>"
 
 # PUSH step
-git push origin HEAD:<branch_name>
+git push origin HEAD:<branch_name> -f
 ```
