@@ -18,7 +18,7 @@ git add .
 git commit -m "<commit_details>"
 
 # PUSH step
-git push origin master:<branch_name>
+git push origin <branch_name>
 ```
 
 ### Switch to master or branch
@@ -31,7 +31,7 @@ git checkout master  # 2nd
 git checkout <specific_branch>
 ```
 
-### Discard changes in working directory
+### Discard changes ( before commit, after add )
 ```shell
 git checkout -- <file>
 ```
@@ -63,5 +63,5 @@ git add .
 git commit -m "<commit_details>"
 
 # PUSH step
-git push origin master:<branch_name> -f
+git push origin <branch_name> -f
 ```
