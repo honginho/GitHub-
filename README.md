@@ -30,8 +30,13 @@ git checkout master
 git checkout <specific_branch>
 ```
 
-### Discard changes ( before commit, after add )
+### Discard changes
 ```shell
+# before add command
+git checkout -- <file>
+
+# before commit, after add command
+git reset
 git checkout -- <file>
 ```
 
@@ -41,13 +46,6 @@ git checkout -- <file>
 git log --oneline
 
 # revert back to the specific commit
-git checkout <specific_commit_hash>
-
-# if accidentally modify something at this moment
-# it is impossible to revert the latest commit
-# so force to switch to the latest commit
-# and revert back to the specific commit again
-git checkout -f -
 git checkout <specific_commit_hash>
 
 # remove the latest commit
