@@ -21,6 +21,21 @@ git commit -m "<commit_details>"
 git push origin HEAD:<branch_name>
 ```
 
+### Switch to master or branch
+```shell
+# switch to master (two ways)
+git checkout -       # 1st
+git checkout master  # 2nd
+
+# switch to specific branch
+git checkout <specific_branch>
+```
+
+### Discard changes in working directory
+```shell
+git checkout -- <file>
+```
+
 ### (On branch) Revert back to the specific commit and start new commit from it
 ```shell
 # check every commit
