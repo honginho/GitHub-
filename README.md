@@ -64,4 +64,23 @@ git commit -a
 
 # PUSH step
 git push origin HEAD:<branch_name> -f
+
+# --------------------------------------------------
+#  however, HEAD detached at <detached_commit_hash>
+# --------------------------------------------------
+
+# check branch
+git branch # || git branch -v
+
+# create a temp branch for the detached HEAD
+git branch <tmp_branch_name> <detached_commit_hash>
+
+# checkout and merge temp branch to original branch
+git checkout <branch_name>
+git merge <tmp_branch_name>
+
+# after resolve conflict parts
+git add .
+git commit -m "<commit_details>"
+git push origin <branch_name>
 ```
