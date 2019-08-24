@@ -59,9 +59,12 @@ git revert <latest_commit_hash>
 # -----------------------------
 
 # COMMIT step
+# if change something ......
 git add .
 git commit -m "<commit_details>"
+# else ......
+git commit -a
 
 # PUSH step
-git push origin <branch_name> -f
+git push origin <branch_name>
 ```
