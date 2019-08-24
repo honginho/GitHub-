@@ -18,7 +18,7 @@ git add .
 git commit -m "<commit_details>"
 
 # PUSH step
-git push origin HEAD:<branch_name>
+git push origin <branch_name>
 ```
 
 ### Delete local and remote branch
@@ -34,16 +34,20 @@ git branch
 
 ### Switch to master or branch
 ```shell
-# switch to master (two ways)
-git checkout -       # 1st
-git checkout master  # 2nd
+# switch to master
+git checkout master
 
 # switch to specific branch
 git checkout <specific_branch>
 ```
 
-### Discard changes in working directory
+### Discard changes
 ```shell
+# before add command
+git checkout -- <file>
+
+# before commit, after add command
+git reset
 git checkout -- <file>
 ```
 
@@ -55,13 +59,6 @@ git log --oneline
 # revert back to the specific commit
 git checkout <specific_commit_hash>
 
-# if accidentally modify something at this moment
-# it is impossible to revert the latest commit
-# so force to switch to the latest commit
-# and revert back to the specific commit again
-git checkout -f -
-git checkout <specific_commit_hash>
-
 # remove the latest commit
 git revert <latest_commit_hash>
 
@@ -70,9 +67,31 @@ git revert <latest_commit_hash>
 # -----------------------------
 
 # COMMIT step
+# if change something ......
 git add .
 git commit -m "<commit_details>"
+# else ......
+git commit -a
 
 # PUSH step
 git push origin HEAD:<branch_name> -f
+
+# --------------------------------------------------
+#  however, HEAD detached at <detached_commit_hash>
+# --------------------------------------------------
+
+# check branch
+git branch # || git branch -v
+
+# create a temp branch for the detached HEAD
+git branch <tmp_branch_name> <detached_commit_hash>
+
+# checkout and merge temp branch to original branch
+git checkout <branch_name>
+git merge <tmp_branch_name>
+
+# after resolve conflict parts
+git add .
+git commit -m "<commit_details>"
+git push origin <branch_name>
 ```
