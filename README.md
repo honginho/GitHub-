@@ -21,6 +21,17 @@ git commit -m "<commit_details>"
 git push origin HEAD:<branch_name>
 ```
 
+### Delete local and remote branch
+```shell
+git branch -d <specific_branch>
+git push origin :<specific_branch>
+```
+
+### List all branches
+```shell
+git branch
+```
+
 ### Switch to master or branch
 ```shell
 # switch to master (two ways)
