@@ -18,7 +18,7 @@ git add .
 git commit -m "<commit_details>"
 
 # PUSH step
-git push origin HEAD:<branch_name>
+git push origin master:<branch_name>
 ```
 
 ### Switch to master or branch
@@ -63,5 +63,5 @@ git add .
 git commit -m "<commit_details>"
 
 # PUSH step
-git push origin HEAD:<branch_name> -f
+git push origin master:<branch_name> -f
 ```
