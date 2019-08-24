@@ -23,9 +23,8 @@ git push origin <branch_name>
 
 ### Switch to master or branch
 ```shell
-# switch to master (two ways)
-git checkout -       # 1st
-git checkout master  # 2nd
+# switch to master
+git checkout master
 
 # switch to specific branch
 git checkout <specific_branch>
@@ -66,5 +65,5 @@ git commit -m "<commit_details>"
 git commit -a
 
 # PUSH step
-git push origin <branch_name>
+git push origin HEAD:<branch_name> -f
 ```
