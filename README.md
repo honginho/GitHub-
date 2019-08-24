@@ -9,9 +9,7 @@ cd <target_repo_dir>
 # create a branch
 git checkout -b <branch_name>
 
-# --------------
 #  do something
-# --------------
 
 # COMMIT step
 git add .
@@ -62,9 +60,7 @@ git checkout <specific_commit_hash>
 # remove the latest commit
 git revert <latest_commit_hash>
 
-# -----------------------------
 #  do something for new commit
-# -----------------------------
 
 # COMMIT step
 # if change something ......
@@ -90,8 +86,9 @@ git branch <tmp_branch_name> <detached_commit_hash>
 git checkout <branch_name>
 git merge <tmp_branch_name>
 
-# after resolve conflict parts
+# if conflict then after resolving
 git add .
 git commit -m "<commit_details>"
-git push origin <branch_name>
+
+git push origin <branch_name> # if on master: git push
 ```
